@@ -1,0 +1,28 @@
+services:
+  # Development service
+  dev:
+    build:
+      context: .
+      target: build
+    image: paint-by-numbers-dev
+    container_name: paint-by-numbers-dev
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm run dev
+    environment:
+      - NODE_ENV=development
+      - VITE_HOST=0.0.0.0
+
+  # Production service
+  prod:
+    build:
+      context: .
+    image: paint-by-numbers-prod
+    container_name: paint-by-numbers-prod
+    ports:
+      - "8123:80"
+    environment:
+      - NODE_ENV=production
