@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { Upload, Image as ImageIcon, Eye, Download } from 'lucide-react';
 import { processImage, analyzeImageComplexity } from './ImageProcessor';
@@ -80,7 +80,7 @@ function App() {
       <div className="max-w-6xl mx-auto">
         <header className="text-center mb-12">
           <h1 className="text-4xl font-bold text-indigo-600 mb-4 font-display">
-            Paint by Numbers Generator
+            Paint by Numbers
           </h1>
           <p className="text-lg text-indigo-400">
             Turn your favorite pictures into fun coloring activities!

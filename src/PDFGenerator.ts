@@ -27,6 +27,9 @@ export const generatePDF = (
   // Draw title
   pdf.setFontSize(16);
   pdf.text('Paint by Numbers', pageWidth / 2, margin, { align: 'center' });
+  // Set subtitle: https://paintbynumbers.sarmiento.cc/
+  pdf.setFontSize(10);
+  pdf.text('https://paintbynumbers.sarmiento.cc/', pageWidth / 2, margin + 5, { align: 'center' });
   
   // Draw grid
   pdf.setLineWidth(0.1);
