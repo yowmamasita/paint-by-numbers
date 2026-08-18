@@ -23,6 +23,6 @@ services:
     image: paint-by-numbers-prod
     container_name: paint-by-numbers-prod
     ports:
-      - "8123:80"
+      - "8124:80"
     environment:
       - NODE_ENV=production
